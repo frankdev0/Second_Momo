@@ -1,8 +1,5 @@
-// import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-// import { Link } from "gatsby";
-// import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 
 // interface Props {
@@ -24,11 +21,11 @@ export default function Navbar({path}) {
 					{/* <StaticImage className="w-[40px] lg:w-full h-full" src='../images/mologoo.png' alt='Momo Logo' /> */}
                     <div className="relative w-[40px] lg:w-full h-full">
                     <Image
-                        src="/mologoo.png"  // Adjust the path according to your public directory structure
+                        src="/mologoo.png"  
                         alt="Momo Logo"
-                        width={200}  // Adjust based on your actual image's dimensions
+                        width={200}  
                         height={100}
-                        layout="responsive"  // This ensures the image scales with the container
+                        layout="responsive"  
                     />
                     </div>
 				</Link>
