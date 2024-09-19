@@ -5,20 +5,14 @@ import React from "react";
 // import { Navbar, Footer, Testimonial } from "../components";
 // import Img from "gatsby-image";
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 
-interface HomeProps {
-    location: {
-      pathname: string;
-      search: string;
-      hash: string;
-    };
-  }
+
 
 // export default function About({ location }) {
-    const About: React.FC<HomeProps> = () => {
+    const About = () => {
     const router = useRouter();
     const { pathname } = router;
     // const data = useStaticQuery(graphql`
@@ -67,7 +61,7 @@ interface HomeProps {
                                 />
                                 </a> */}
                                 <a href='https://apps.apple.com/ng/app/sporty-credit/id6450298959'>
-                                    <Image src="/app.svg" alt="Apple Logo" width={180} height={180} layout="fixed"/>
+                                    <Image src="/app.svg" alt="Apple Logo" width={180} height={180} fixed='true'/>
                                 </a>
                             </div>
 
@@ -80,7 +74,7 @@ interface HomeProps {
                                 />
                                 </a> */}
                                 <a href="https://dit.fra1.cdn.digitaloceanspaces.com/apk/app.apk" target="_blank" rel="noopener noreferrer">
-                                    <Image src="/google-play-badge.png" alt="Google Store" width={200} height={60} layout="fixed"/>
+                                    <Image src="/google-play-badge.png" alt="Google Store" width={200} height={60} fixed='true'/>
                                 </a>
                             </div>
                         </div>
@@ -95,7 +89,7 @@ interface HomeProps {
                     />
                 </div> */}
                 <div className='px-10 md:px-0 md:mr-28 my-2' id="bounce">
-                    <Image src="/groupeddevicex.png" alt="" width={800} height={600} layout="responsive"/>
+                    <Image src="/groupeddevicex.png" alt="" width={800} height={600} responsive/>
                 </div>
             </div>
 
@@ -118,7 +112,7 @@ interface HomeProps {
                             </div> */}
 
                             <div className="xl:-translate-x-20 2xl:-translate-x-44">
-                                <Image src="/white_star.svg" alt="" width={300} height={300} layout="responsive"/>
+                                <Image src="/white_star.svg" alt="" width={300} height={300} responsive/>
                             </div>
                         </div>
 
@@ -138,7 +132,7 @@ interface HomeProps {
                             </div> */}
 
                             <div className="mt-8 hidden md:block">
-                                <Image src="/momoloannew.jpg" alt="" width={650} height={400} layout="responsive" className="rounded-md"/>
+                                <Image src="/momoloannew.jpg" alt="" width={650} height={400} responsive className="rounded-md"/>
                             </div>
 
 
@@ -148,7 +142,7 @@ interface HomeProps {
                                         <StaticImage className='w-6 h-6' src="../moneybag.svg" alt="" />
                                     </div> */}
                                     <div className="overflow-hidden my-auto">
-                                        <Image src="/moneybag.svg" alt="" width={24} height={24} layout="fixed"/>
+                                        <Image src="/moneybag.svg" alt="" width={24} height={24} fixed='true'/>
                                     </div>
 
                                     <div className="overflow-hidden">
@@ -163,7 +157,7 @@ interface HomeProps {
                                         <StaticImage className='w-6 h-6' src="../cash.svg" alt="" />
                                     </div> */}
                                     <div className="overflow-hidden my-auto">
-                                        <Image src="/cash.svg" alt="" width={24} height={24} layout="fixed"/>
+                                        <Image src="/cash.svg" alt="" width={24} height={24} fixed='true'/>
                                     </div>
 
                                     <div className="overflow-hidden">
@@ -178,7 +172,7 @@ interface HomeProps {
                                         <StaticImage className='w-6 h-6' src="../secure.svg" alt="" />
                                     </div> */}
                                     <div className="overflow-hidden my-auto">
-                                        <Image src="/secure.svg" alt="" width={24} height={24} layout="fixed"/>
+                                        <Image src="/secure.svg" alt="" width={24} height={24} fixed='true'/>
                                     </div>
 
                                     <div className="overflow-hidden">
@@ -201,7 +195,7 @@ interface HomeProps {
                             <Image
                                 src="/momoloannew.jpg"
                                 alt=""
-                                layout="fill"
+                                fill
                                 objectFit="cover" // Adjust as necessary to maintain aspect ratio
                             />
                         </div>
@@ -217,7 +211,7 @@ interface HomeProps {
                                         alt=""
                                         width={20}
                                         height={20}
-                                        layout="fixed"
+                                        fixed='true'
                                     />
                                 </div>
                                 <div>Flexible Terms</div>
@@ -233,7 +227,7 @@ interface HomeProps {
                                     alt=""
                                     width={20}
                                     height={20}
-                                    layout="fixed"
+                                    fixed='true'
                                 />
                             </div>
                                 <div>No Hidden Charges</div>
@@ -249,7 +243,7 @@ interface HomeProps {
                                         alt=""
                                         width={20}
                                         height={20}
-                                        layout="fixed"
+                                        fixed='true'
                                     />
                                 </div>
                                 <div>Secure and Safe</div>
@@ -269,7 +263,7 @@ interface HomeProps {
                         <Image
                             src="/momoimage.e copy.png"
                             alt=""
-                            layout="fill"
+                            fill
                             objectFit="cover"
                         />
                     </div>
@@ -282,7 +276,7 @@ interface HomeProps {
                             <Image
                                 src="/imagein.png"
                                 alt=""
-                                layout="fill"
+                                fill
                                 objectFit="cover"
                             />
                         </div>
@@ -295,7 +289,7 @@ interface HomeProps {
                         <Image
                             src="/momoina.png"
                             alt=""
-                            layout="fill"
+                            fill
                             objectFit="cover"
                         />
                     </div>
@@ -336,7 +330,7 @@ interface HomeProps {
                                 alt="Apple Logo"
                                 width={180}
                                 height={180} // Adjust based on actual aspect ratio
-                                layout="fixed"
+                                fixed='true'
                             />
                         </a>
                         </div>
@@ -355,7 +349,7 @@ interface HomeProps {
                                     alt="Google Play Store"
                                     width={200}
                                     height={60} // Adjust based on actual aspect ratio
-                                    layout="fixed"
+                                    fixed='true'
                                 />
                             </a>
                         </div>
@@ -371,7 +365,7 @@ interface HomeProps {
                 <Image
                     src="/momoimage.jpg"
                     alt=""
-                    layout="fill"
+                    fill
                     objectFit="cover"
                 />
             </div>
@@ -384,7 +378,7 @@ interface HomeProps {
                         alt=""
                         width={50} // Estimate or check the actual size
                         height={50} // Maintain aspect ratio
-                        layout="fixed"
+                        fixed='true'
                     />
                 </div>
                 </div>

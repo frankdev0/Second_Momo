@@ -5,11 +5,11 @@ import Link from "next/link";
 // import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 
-interface Props {
-	path?: string;
-}
+// interface Props {
+// 	path?: string;
+// }
 
-export default function Navbar({ path }: Props) {
+export default function Navbar({path}) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const activeMenu = 'text-kashmir-blue';

@@ -5,21 +5,21 @@ import React from "react";
 // import { Navbar, Footer, Testimonial } from "../components";
 // import Img from "gatsby-image";
 // import { graphql, useStaticQuery } from "gatsby";
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
 import Image from "next/image";
-import Footer from "@/components/Footer";
+import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 
-interface HomeProps {
-    location: {
-      pathname: string;
-      search: string;
-      hash: string;
-    };
-  }
+// interface HomeProps {
+//     location: {
+//       pathname: string;
+//       search: string;
+//       hash: string;
+//     };
+//   }
 
 // export default function Home({ location}) {
-const Home: React.FC<HomeProps> = () => {
+const Home = () => {
 // export default function Home() {
 
 const router = useRouter();

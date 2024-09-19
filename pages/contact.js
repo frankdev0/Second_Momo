@@ -1,6 +1,6 @@
 // import { StaticImage } from "gatsby-plugin-image";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, {useState} from "react";
@@ -8,31 +8,31 @@ import React, {useState} from "react";
 // import { Navbar, Footer, Testimonial } from "../components";
 import { useForm } from "react-hook-form";
 
-interface HomeProps {
-  location: {
-    pathname: string;
-    search: string;
-    hash: string;
-  };
-}
+// interface HomeProps {
+//   location: {
+//     pathname: string;
+//     search: string;
+//     hash: string;
+//   };
+// }
 
 
 // export default function About({ location }) {
-  const Contact: React.FC<HomeProps> = () => {
+  const Contact = () => {
     const router = useRouter();
     const { pathname } = router;
 
     const [activeIndex, setActiveIndex] = useState(-1);
     const [activeIndexTwo, setActiveIndexTwo] = useState(-1);
 
-    const toggleAccordionTwo = (index: number) => {
+    const toggleAccordionTwo = () => {
       if (activeIndexTwo === index) {
         setActiveIndexTwo(-1);
       } else {
         setActiveIndexTwo(index);
       }
     };
-    const toggleAccordion = (index: number) => {
+    const toggleAccordion = () => {
       if (activeIndex === index) {
         setActiveIndex(-1);
       } else {
@@ -46,7 +46,7 @@ interface HomeProps {
     // formState: { errors },
   } = useForm();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async () => {
     const isValid = await trigger();
     if (!isValid) {
       e.preventDefault();

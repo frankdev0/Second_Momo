@@ -1,20 +1,20 @@
 // import { useStaticQuery, graphql } from "gatsby";
 // import { StaticImage } from "gatsby-plugin-image";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import { useRouter } from "next/router";
 import React from "react";
 
-    interface HomeProps {
-        location: {
-          pathname: string;
-          search: string;
-          hash: string;
-        };
-      }
+    // interface HomeProps {
+    //     location: {
+    //       pathname: string;
+    //       search: string;
+    //       hash: string;
+    //     };
+    //   }
     
     // export default function Terms({ location }) {
-        const Terms: React.FC<HomeProps> = () => {
+        const Terms = () => {
             const router = useRouter();
             const { pathname } = router;
     // const data = useStaticQuery(graphql`
